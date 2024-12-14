@@ -286,16 +286,16 @@ namespace eclipse::gui {
 
         switch (type) {
             default:
-#ifndef GEODE_IS_MOBILE
+// #ifndef GEODE_IS_MOBILE
             case RendererType::ImGui:
                 m_renderer = std::make_shared<imgui::ImGuiRenderer>();
                 break;
-#endif
-#ifndef GEODE_IS_DESKTOP
-            case RendererType::Cocos2d:
-                m_renderer = std::make_shared<cocos::CocosRenderer>();
-                break;
-#endif
+//#endif
+//#ifndef GEODE_IS_DESKTOP
+     //       case RendererType::Cocos2d:
+    //            m_renderer = std::make_shared<cocos::CocosRenderer>();
+      //          break;
+//#endif
         }
 
         m_renderer->init();
